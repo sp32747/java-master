@@ -1,0 +1,47 @@
+package com.sree.leet;
+
+import java.util.Arrays;
+
+public class FirstMissingPositive {
+
+	public static void main(String[] args) {
+		int[] arr = { 4, -1, 1, 8, -5, 11, 3, 0 };
+		int resNum=0;
+
+		// first preprocess and replace 0,-ve values with soem un used integer for
+		// example
+		// an integer more than the length of the array
+
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] <= 0) {
+				arr[i] = arr.length + 1;
+			}
+		}
+		// mark the indexes
+		for (int i = 0; i < arr.length; i++) {
+			int index = Math.abs(arr[i]) - 1;
+
+			if (index<arr.length && arr[index] > 0) {
+				arr[index] = arr[index] * -1;
+
+			}
+		}
+		// scan the array
+		
+		for (int i = 0; i < arr.length; i++) {
+			if(arr[i]>0) {
+				resNum=i+1;
+			}
+			
+			else {
+				resNum=arr.length+1;
+			}
+		}
+
+		System.out.println(Arrays.toString(arr));
+		
+		System.out.println(resNum);
+
+	}
+
+}

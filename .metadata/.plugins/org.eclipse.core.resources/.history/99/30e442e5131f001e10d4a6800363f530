@@ -1,0 +1,14 @@
+package com.sree.leet;
+
+public class FirstMissingPositive {
+
+	public static void main(String[] args) {
+		int[] arr = { 4, -3, 2, 7, -8, 2, 3, 1,0 };
+		
+		//first preprocess and replace 0,-ve values with soem un used integer for example 
+		//an integer more than the length of the array
+		
+
+	}
+
+}

@@ -1,0 +1,32 @@
+package com.sree.leet;
+
+public class LongestCommoPrefix {
+
+	public static void main(String[] args) {
+		String[] arr = { "flow", "flower", "flew" };
+		//String longestPrefix = longestPrefixString(arr);
+
+		//System.out.println(longestPrefix);
+		
+		int x= "flower".indexOf("flew");
+		
+		System.out.println("flow".charAt(0)-'f');
+
+	} 
+
+	private static String longestPrefixString(String[] arr) {
+		String prefix = arr[0];
+
+		for (int i = 1; i < arr.length; i++) {
+			while (arr[i].indexOf(prefix) != 0) {
+				prefix = prefix.substring(0, prefix.length() - 1);
+
+				if (prefix.isEmpty()) {
+					return " ";
+				}
+			}
+		}
+		return prefix;
+	}
+
+}

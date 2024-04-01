@@ -1,0 +1,25 @@
+package com.sree.leet.tree.datastructure;
+
+class Node{
+	int item;
+	Node left ,right;
+	public Node(int item) {
+		
+		this.item = item;
+		left=right=null;
+	}
+	
+}
+
+
+public class InorderTravershal {
+
+	
+	
+	public static void main(String[] args) {
+
+
+
+	}
+
+}

@@ -1,0 +1,22 @@
+package com.sree.leet;
+
+public class XRootWithErrorCondition {
+
+	public static void main(String[] args) {
+
+		double num = 27.0;
+		int root = 3;
+		double error = .001;
+		double ans = rootOfNum(num, root ,error);
+
+	}
+
+	private static double rootOfNum(double num, int root, double error) {
+		double left = 1.0;
+		double right = num;
+		double mid=(left+right)/2.0;
+		
+		return 0;
+	}
+
+}

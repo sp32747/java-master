@@ -1,0 +1,40 @@
+package com.sree.leet;
+
+public class PallindromeIgnoringSpaceSpclChar {
+
+	public static void main(String[] args) {
+		String testString = "  A Man, a Plan, a Canal, Panama";
+
+		boolean res = testPallindrome(testString);
+		System.out.println(res);
+	}
+
+	private static boolean testPallindrome(String testString) {
+		int left = 0;
+		int right = testString.length() - 1;
+
+		while (left <= right) {
+			char c1 = testString.charAt(left);
+			char c2 = testString.charAt(right);
+
+			if (Character.isLetterOrDigit(c1) == false)
+				left++;
+			else if (Character.isLetterOrDigit(c2) == false)
+				right--;
+			
+			else {
+				
+				if(Character.toLowerCase(c1)!=Character.toLowerCase(c2)) {
+					return false;
+				}
+				
+				left++;
+				right--;
+			}
+
+		}
+
+		return true;
+	}
+
+}

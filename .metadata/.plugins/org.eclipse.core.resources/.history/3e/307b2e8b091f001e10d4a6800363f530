@@ -1,0 +1,26 @@
+package com.sree.leet;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class FindDuplicatesInOneToNArray {
+
+	public static void main(String[] args) {
+
+		int[] arr = { 4, 3, 2, 7, 8, 2, 3, 1 };
+		List<Integer> resList = new ArrayList();
+		
+		
+		for(int i=0;i<arr.length;i++) {
+			int index=arr[i]-1;
+			if(arr[index]>0) {
+				arr[index]=Math.abs(r[index])*-1;
+			}
+			else {
+				resList.add(arr[i]);
+			}
+		}
+        System.out.println(resList);
+	}
+
+}

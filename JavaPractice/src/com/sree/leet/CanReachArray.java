@@ -1,0 +1,24 @@
+package com.sree.leet;
+
+public class CanReachArray {
+
+	public static void main(String[] args) {
+		int[] nums = { 2, 3, 1, 1, 4 };
+		boolean res = canReach(nums);
+		System.out.println(res);
+
+	}
+
+	private static boolean canReach(int[] nums) {
+		// reachable i+nums[i] by this we can think of going to the last index.
+		int reachable = 0;
+		for (int i = 0; i < nums.length && i <= reachable; i++) {
+			reachable = Math.max(reachable, i + nums[i]);
+			if (reachable >= nums.length - 1) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+}

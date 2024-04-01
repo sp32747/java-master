@@ -1,0 +1,13 @@
+package com.sree.designpattern.factory;
+
+public class PizaaStore {
+
+	public Pizaa orderPizza(String type) {
+		Pizaa p=PizzaFactory.createPizza(type);
+		return p;
+	}
+	
+	
+	
+	
+}

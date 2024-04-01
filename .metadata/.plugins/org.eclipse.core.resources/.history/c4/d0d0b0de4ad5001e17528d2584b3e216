@@ -1,0 +1,40 @@
+package com.sree.stream2;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class StreamProgrammingQuestions {
+
+	public static void main(String[] args) {
+		String name = "srikantapnigrahi";
+
+		System.out.println("*****count all the occurence of each character in the String ****");
+		String[] namedStringArray = name.split("");
+
+		Map<String, Long> mapX = Stream.of(name.split(""))
+				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+		System.out.println(mapX);
+
+		System.out.println("*****find all the duplicate elements in the String****");
+
+		Arrays.asList(namedStringArray).stream()
+				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting())).entrySet().stream()
+				.filter(x -> x.getValue() > 1).map(Map.Entry::getKey).collect(Collectors.toList()).stream()
+				.forEach(System.out::print);
+
+		System.out.println("*****find all the unique  elements in the String****");
+
+		Arrays.asList(namedStringArray).stream()
+				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting())).entrySet().stream()
+				.filter(x -> x.getValue() == 1).map(Map.Entry::getKey)
+				.collect(Collectors.toList()).forEach(System.out::print);
+	}
+
+}

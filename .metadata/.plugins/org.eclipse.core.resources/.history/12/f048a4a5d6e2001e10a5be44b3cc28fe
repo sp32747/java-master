@@ -1,0 +1,19 @@
+package com.sree.practice;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class ConcurrentHashMapTest {
+	
+	Map<Integer,String> hashMap=new HashMap();
+	
+	
+	
+	public static void main(String[] args) {
+
+		hashMap.
+	
+	
+	}
+
+}

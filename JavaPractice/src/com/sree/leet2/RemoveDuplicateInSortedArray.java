@@ -1,0 +1,26 @@
+package com.sree.leet2;
+
+
+
+public class RemoveDuplicateInSortedArray {
+
+	public static void main(String[] args) {
+		int[] arr = { 1, 1, 1, 2, 3, 5, 5, 9, 10, 15 };
+
+		int left = 0;
+		int right = 0;
+
+		while (right < arr.length) {
+			if (arr[left] != arr[right]) {
+				left++;
+				arr[left] = arr[right];
+			}
+			right++;
+
+		}
+
+		System.out.println(left + 1);
+
+	}
+
+}

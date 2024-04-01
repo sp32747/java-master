@@ -1,0 +1,44 @@
+package com.sree.stream;
+
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class StreamTest {
+	
+public static void main(String[] args) {
+	
+	
+	List<Employee> employees=EmployeeDao.getAll();
+	
+	List<List<Employee>> nestedEmployeesList=EmployeeDao.getAllNested();
+	
+	
+	
+
+	employees.stream().forEach( System.out::println);
+	
+	//Print the list of employee emails
+	employees.stream().map(employee->employee.getEmail()).collect(Collectors.toList()).forEach(System.out::println);
+	
+	
+	//flattening the stream 
+	employees.stream().flatMap(employee->employee.getPhoneNumbers().stream()).collect(Collectors.toList()).forEach(System.out::println);
+	
+	
+	employees.stream().filter(emp->emp.getAge()>100).collect(Collectors.toList()).stream().forEach(System.out::println);
+	
+	String inputStringToCountFrqChar="Srikantask";
+	Arrays.stream(inputStringToCountFrqChar.split("")).collect(Collectors.groupingBy(Function.identity(),Collectors.counting());
+
+	
+	
+	
+	System.out.println("***************************************************");
+	
+	nestedEmployeesList.stream().flatMap(emp->emp.stream().flatMap(e->e.getPhoneNumbers().stream())).forEach(System.out::println);
+}
+}

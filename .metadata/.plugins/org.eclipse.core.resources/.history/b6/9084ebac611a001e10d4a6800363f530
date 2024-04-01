@@ -1,0 +1,27 @@
+package com.sree.leet;
+
+public class AdditionOfOneToArrayOfDigits {
+
+	public static void main(String[] args) {
+		int[] digits = { 9, 9, 9 };
+
+		addWithOne(digits);
+
+	}
+
+	private static void addWithOne(int[] digits) {
+		int carry = 1;
+		for (int i = digits.length - 1; i <= 0; i--) {
+			int curr = digits[i] + carry;
+
+			if (curr >= 10) {
+
+				carry = 1;
+				digits[i] = curr % 10;
+			}
+
+		}
+
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.sree.practice;
+
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
+public class FunctionalSideEffect {
+	static int count=0;
+	
+	public static void main(String[] args) {
+		
+		
+		List<Integer> numList = IntStream.range(1, 1000)
+	      .boxed()
+	      .collect(Collectors.toList());
+		
+	numList.stream().forEach(count->count=count+1);
+	System.out.println(count);
+		
+	}
+}

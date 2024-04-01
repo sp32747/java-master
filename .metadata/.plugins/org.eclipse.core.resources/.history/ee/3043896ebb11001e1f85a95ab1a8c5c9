@@ -1,0 +1,21 @@
+package com.sree.leet;
+
+public class PallindromeIgnoringSpaceSpclChar {
+
+	public static void main(String[] args) {
+		String testString="A Man, a Plan, a Canal, Panama";
+		
+		boolean res=testPallindrome(testString);
+System.out.println(res);
+	}
+
+	private static boolean testPallindrome(String testString) {
+		
+		
+		
+		
+		
+		return true;
+	}
+
+}
