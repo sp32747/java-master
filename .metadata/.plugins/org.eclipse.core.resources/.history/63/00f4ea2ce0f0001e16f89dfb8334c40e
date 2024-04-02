@@ -31,11 +31,10 @@ public class CountVowels {
 
 		System.out.println(countMap);
 
-	
-		//count the number of characters
+		String inputStringToCountFrqChar = "Srikantask panigrahi";
 		
 		  Map<Object, Long> xmap =
-		  Arrays.stream(input.split("")).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		  Arrays.stream(inputStringToCountFrqChar.split("")).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
 		  
 		  System.out.println(xmap);
 		  

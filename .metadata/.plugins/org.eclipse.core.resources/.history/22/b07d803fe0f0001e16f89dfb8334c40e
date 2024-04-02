@@ -32,7 +32,6 @@ public class CountVowels {
 		System.out.println(countMap);
 
 	
-		//count the number of characters
 		
 		  Map<Object, Long> xmap =
 		  Arrays.stream(input.split("")).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
