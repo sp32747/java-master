@@ -6,7 +6,7 @@ public class RevStringCleanSpace {
 
 	public static void main(String[] args) {
 
-		String s = " i am  sree  ";
+		String s = " i am  sree  ";  //with empty space string 
 
 		reverseWords(s);
 
@@ -78,7 +78,7 @@ public class RevStringCleanSpace {
 			left++;
 			right--;
 		}
-		// System.out.println(Arrays.toString(str));
+		 System.out.println(Arrays.toString(str));
 	}
 
 }

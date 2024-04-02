@@ -1,0 +1,10 @@
+package com.sree.leet2;
+
+public class ReverseNumberWithIntegerRange {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
