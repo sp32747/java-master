@@ -15,7 +15,7 @@ public class RevStringCleanSpace {
 	private static String reverseWords(String s) {
 		char[] str = s.toCharArray();
 		// reverse the entire string
-		reverse(str, 0, str.length - 1);
+		//reverse(str, 0, str.length - 1);
 
 		// reverse each word
 		reverseWord(str);
@@ -78,7 +78,7 @@ public class RevStringCleanSpace {
 			left++;
 			right--;
 		}
-		 System.out.println(Arrays.toString(str));
+		// System.out.println(Arrays.toString(str));
 	}
 
 }

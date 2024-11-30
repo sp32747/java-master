@@ -29,23 +29,14 @@ public class StreamTest {
 
 		employeesList.stream().filter(emp -> emp.getAge() > 100).collect(Collectors.toList()).stream()
 				.forEach(System.out::println);
-		System.out.println("***************************************************");
-		
-		String inputStringToCountFrqChar = "Srikantask";
-		Map<String, Long> outputMap = Arrays.stream(inputStringToCountFrqChar.split(""))
-				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-
-		System.out.println(outputMap);
-
-		
-		Map<String, Long> countMap = Arrays.stream(inputStringToCountFrqChar.split("")).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
 		
 		
-		
+			
 		
 		System.out.println("***************************************************");
 
-		nestedEmployeesList.stream().flatMap(emp -> emp.stream().flatMap(e -> e.getPhoneNumbers().stream()))
+		nestedEmployeesList.stream()
+				.flatMap(emp -> emp.stream().flatMap(e -> e.getPhoneNumbers().stream()))
 				.forEach(System.out::println);
 
 		System.out.println("******************Highest Paid employee from each department**************************");
@@ -53,15 +44,7 @@ public class StreamTest {
 		
 		employeesList.stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.reducing(BinaryOperator.maxBy(SalComp))));
 		
-		
-		
-		
-		
-		
-		
-
-		
-
+	
 		Map<String, Optional<Employee>> deptMap = employeesList.stream().collect(
 				Collectors.groupingBy(Employee::getDepartment, Collectors.reducing(BinaryOperator.maxBy(SalComp))));
 

@@ -1,0 +1,18 @@
+package com.sree.lambdatest;
+
+
+class Project{
+	private String projectCode;
+	private String name ;
+	private String client;
+	private String buLeadName;
+	
+	public Project(String projectCode, String name, String client, String buLeadName) {
+		super();
+		this.projectCode = projectCode;
+		this.name = name;
+		this.client = client;
+		this.buLeadName = buLeadName;
+	}
+	
+}

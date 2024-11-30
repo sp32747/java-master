@@ -14,7 +14,7 @@ public class TestEecutor1 {
 		
 		int numberOfCores=Runtime.getRuntime().availableProcessors();
 		
-		System.out.println(numberOfCores);
+		//System.out.println(numberOfCores);
 		
 		//thread pool internally uses blocking queue to store the task to avoid concurrency issue by the threads
 		

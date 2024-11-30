@@ -1,0 +1,13 @@
+package com.sree.lambdatest;
+
+import java.util.List;
+
+public class CheatSheet2 {
+
+	public static void main(String[] args) {
+		List<Employee2> employees = EmployeeDataBase.getAllEmployees();
+		
+		
+	}
+
+}

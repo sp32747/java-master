@@ -1,0 +1,33 @@
+package com.sree.java.code;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class StringTest {
+
+	public static void main(String[] args) {
+	
+		String s1=new String("Srikanta");
+		
+		String s2="Srikanta";
+		
+		System.out.println("s1.hashCode()"+s1.hashCode());
+		System.out.println("s2.hashCode()"+s2.hashCode());
+		
+		//because
+		
+		System.out.println((s1.intern().hashCode())==(s2.hashCode()));
+		
+		final List<String> lst =new ArrayList<>();
+		lst.add("a");
+		lst.add("b");
+		
+		System.out.println(lst);
+		
+		
+		//can not re assign it as it is final
+		// lst=new ArrayList<>();
+
+	}
+
+}

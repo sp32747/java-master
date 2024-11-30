@@ -1,0 +1,20 @@
+package com.sree.lambdatest;
+
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class Java8MethodCheatSheet {
+
+	public static void main(String[] args) {
+
+		List<Employee2> employees = EmployeeDataBase.getAllEmployees();
+
+		employees.stream().map(e -> e.getProjects().stream().map(p -> p.getName())).collect(Collectors.toList())
+				.forEach(System.out::println);
+		;
+
+		
+
+	}
+}

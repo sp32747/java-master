@@ -61,19 +61,28 @@ public class StreamProgrammingQuestions {
 
 		System.out.println("*****find longest  element in the string array  ****");
 
-		String[] stringArr = { "srikanta", "panigrahi", "Avyaan", "Nilu", "Ipsita", "patro", "Bumbean", "Kiyan" };
+		String[] stringArr = { "srikanta", "panigrahi", "Avyaan", "Nilu", "Ipsita", "patro", "Boombean", "Kiyan", "Daksh" };
 
 		String logestString = Arrays.asList(stringArr).stream().reduce((a, b) -> a.length() > b.length() ? a : b).get();
 		System.out.println("*************logestString**********   " + logestString);
 		
 		
-		System.out.println("*****find numbers which contains 1  in the array  ****");
+		System.out.println("*****find numbers which contains 6  in the array  ****");
 		
-		Arrays.stream(numArr).boxed().map(s -> s +" ").filter(s->s.startsWith("2")).collect(Collectors.toList()).forEach(System.out::print);
+		Arrays.stream(numArr).boxed().map(s -> s +" ").filter(s->s.startsWith("6")).collect(Collectors.toList()).forEach(System.out::print);
 		
 		System.out.println("******************************************************************************************************************");
 		
-		Map<String, Integer> employeeMap=new HashMap<>();
+		System.out.println("***************************************************");
+		
+		String inputStringToCountFrqChar = "Srikantask";
+		Map<String, Long> outputMap = Arrays.stream(inputStringToCountFrqChar.split(""))
+				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+		System.out.println(outputMap);
+
+		
+		Map<String, Long> countMap = Arrays.stream(inputStringToCountFrqChar.split("")).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
 		
 		
 	}

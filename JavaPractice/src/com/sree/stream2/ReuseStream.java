@@ -13,6 +13,8 @@ public class ReuseStream {
 		Stream<String> stringStream = Stream.of("A", "B", "C", "D");
 		Optional<String> result1 = stringStream.findAny();
 		System.out.println(result1.get());
+		
+		//System.out.println(stringStream.findFirst().get());
 
 		// After the #findAny() method is invoked, the stringStream is closed,
 		// therefore, any further operation on the Stream will throw the
@@ -20,7 +22,7 @@ public class ReuseStream {
 		
 		// #findFirst() method.
 
-		// Optional<String> result2 = stringStream.findFirst();
+		//Optional<String> result3 = stringStream.findFirst();
 
 		// Simply put, the solution consists of creating a new Stream each time we need
 		// one.
